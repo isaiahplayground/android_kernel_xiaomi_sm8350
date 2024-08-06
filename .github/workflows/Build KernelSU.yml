@@ -30,7 +30,7 @@ jobs:
         
     - name: Integrate KernelSU
       run: |
-        cd $GITHUB_WORKSPACE/kernel_workspace/ksu_kernel_xiaomi_lisa
+        cd $GITHUB_WORKSPACE/kernel_workspace/android_kernel_xiaomi_sm8350
         rm -rf KernelSU/
         curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s dda8c76
         
@@ -47,4 +47,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: QuicksilveR_KernelSU
-        path: ${{ github.workspace }}/kernel_workspace/ksu_kernel_xiaomi_lisa/${{ env.FILENAME }}
+        path: ${{ github.workspace }}/kernel_workspace/android_kernel_xiaomi_sm8350/${{ env.FILENAME }}
