@@ -20,7 +20,7 @@ jobs:
     - name: Download AOSP Clang
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://gitlab.com/inferno0230/clang-r487747c aosp_clang
+        git clone https://github.com/kdrag0n/proton-clang proton_clang
         export PATH="$GITHUB_WORKSPACE/kernel_workspace/aosp-clang/bin:$PATH"
         
     - name: Download kernel source
