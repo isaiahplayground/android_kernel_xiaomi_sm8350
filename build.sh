@@ -3,7 +3,7 @@
 if [ ! -d "$HOME/tc/aosp_clang" ]
 	then
 		echo -e "\nCloning clang...\n"
-		git clone --single-branch https://github.com/kdrag0n/proton-clang -b "$HOME"/tc/proton_clang
+		git clone --single-branch https://github.com/kdrag0n/proton-clang "$HOME"/tc/proton_clang --depth=1
 fi
 
 SECONDS=0
