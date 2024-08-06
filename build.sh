@@ -3,7 +3,7 @@
 if [ ! -d "$HOME/tc/aosp_clang" ]
 	then
 		echo -e "\nCloning clang...\n"
-		git clone --single-branch https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b clang-r487747c "$HOME"/tc/aosp_clang
+		git clone --single-branch https://gitlab.com/inferno0230/clang-r487747c "$HOME"/tc/aosp_clang
 fi
 
 SECONDS=0
@@ -11,7 +11,7 @@ ZIPNAME="Quickscrap-lisa-$(date '+%Y%m%d-%H%M').zip"
 
 export PATH="$HOME/tc/aosp_clang/bin:$PATH"
 export STRIP="$HOME/tc/aosp_clang/aarch64-linux-gnu/bin/strip"
-export KBUILD_COMPILER_STRING=$("$HOME"/tc/proton_clang/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
+export KBUILD_COMPILER_STRING=$("$HOME"/tc/aosp_clang/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
 
 export ARCH=arm64
 export SUBARCH=arm64
