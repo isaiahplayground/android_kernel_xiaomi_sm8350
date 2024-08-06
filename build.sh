@@ -50,7 +50,7 @@ fi
 
 echo -e "\nKernel compiled succesfully! Zipping up...\n"
 
-git clone -q https://github.com/ItsVixano/AnyKernel3 -b lisa-aosp
+git clone -q https://github.com/isaiahplayground/AnyKernel3 -b master
 cp $kernel AnyKernel3
 cp $dtb AnyKernel3/dtb
 python2 scripts/dtc/libfdt/mkdtboimg.py create AnyKernel3/dtbo.img --page_size=4096 $dtbo
