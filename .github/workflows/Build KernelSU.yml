@@ -21,7 +21,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         git clone https://github.com/kdrag0n/proton-clang proton_clang
-        export PATH="$GITHUB_WORKSPACE/kernel_workspace/aosp-clang/bin:$PATH"
+        export PATH="$GITHUB_WORKSPACE/kernel_workspace/proton_clang/bin:$PATH"
         
     - name: Download kernel source
       run: |
